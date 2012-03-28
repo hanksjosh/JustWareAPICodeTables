@@ -8,11 +8,11 @@ namespace JustWareApiCodeTables
 {
     public class CodeLookupHelper : ICodeLookup
     {
-        private readonly IJustWareApi _justWareApi;
+        private readonly Object _justWareApi;
         private ICodeTableCache _codeTableCache;
         public static readonly string ALL_CODES_QUERY = "Code == Code";
 
-        public CodeLookupHelper(IJustWareApi justWareApi, ICodeTableCache codeTableCache = null)
+        public CodeLookupHelper(Object justWareApi, ICodeTableCache codeTableCache = null)
         {
             if (justWareApi == null)
             {
@@ -22,7 +22,7 @@ namespace JustWareApiCodeTables
             _codeTableCache = codeTableCache;
         }
 
-        public string GetCodeDescription<T>(string code) where T : DataContractBase
+        public string GetCodeDescription<T>(string code)
         {
             Type entityType = typeof(T);
             VerifyEntityIsCodeTable(entityType);
@@ -40,7 +40,7 @@ namespace JustWareApiCodeTables
             return null;
         }
 
-        public List<T> QueryCodeTable<T>(string query) where T : DataContractBase
+        public List<T> QueryCodeTable<T>(string query)
         {
             List<T> codeTables = new List<T>();
             if (_codeTableCache == null)
@@ -67,7 +67,7 @@ namespace JustWareApiCodeTables
             return (List<T>)method.Invoke(_justWareApi, parameters: new object[] { query, null });
         }
 
-        public List<T> GetCodeTable<T>() where T : DataContractBase
+        public List<T> GetCodeTable<T>()
         {
             List<T> list = new List<T>();
             if (_codeTableCache != null)

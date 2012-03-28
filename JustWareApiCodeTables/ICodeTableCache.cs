@@ -5,8 +5,8 @@ namespace JustWareApiCodeTables
 {
     public interface ICodeTableCache
     {
-        void AddToDictionary<T>(List<T> codeTableList) where T : DataContractBase;
-        List<T> QueryCacheCodeTable<T>(string query) where T: DataContractBase;
-        bool IsCodeTableCached<T>() where T: DataContractBase;
+        void AddToDictionary<T>(List<T> codeTableList);
+        List<T> QueryCacheCodeTable<T>(string query);
+        bool IsCodeTableCached<T>();
     }
 }

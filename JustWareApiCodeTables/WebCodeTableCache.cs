@@ -15,12 +15,12 @@ namespace JustWareApiCodeTables
         }
 
 
-        public void AddToDictionary<T>(List<T> codeTableList) where T : JustWareApi.DataContractBase
+        public void AddToDictionary<T>(List<T> codeTableList)
         {
             _cache[typeof(T).Name] = codeTableList;
         }
 
-        public List<T> QueryCacheCodeTable<T>(string query) where T : JustWareApi.DataContractBase
+        public List<T> QueryCacheCodeTable<T>(string query)
         {
             List<T> resultList = new List<T>();
             List<T> cachedList = (List<T>)_cache[typeof (T).Name];
@@ -31,7 +31,7 @@ namespace JustWareApiCodeTables
             return resultList;
         }
 
-        public bool IsCodeTableCached<T>() where T : JustWareApi.DataContractBase
+        public bool IsCodeTableCached<T>()
         {
             List<T> cachedList = (List<T>)_cache[typeof(T).Name];
             if (cachedList != null)

@@ -17,13 +17,13 @@ namespace JustWareApiCodeTables
         {
             CodeTableDictionary = new Dictionary<Type, object>();
         }
-        public void AddToDictionary<T>(List<T> codeTableList) where T : DataContractBase
+        public void AddToDictionary<T>(List<T> codeTableList)
         {
             Type currentType = typeof(T);
             CodeTableDictionary[currentType] = codeTableList;
         }
 
-        public List<T> QueryCacheCodeTable<T>(string query) where T: DataContractBase
+        public List<T> QueryCacheCodeTable<T>(string query)
         {
             Type currentType = typeof(T);
             List<T> resultList = new List<T>();
@@ -36,7 +36,7 @@ namespace JustWareApiCodeTables
             return resultList;
         }
 
-        public bool IsCodeTableCached<T>() where T: DataContractBase
+        public bool IsCodeTableCached<T>()
         {
             return CodeTableDictionary.ContainsKey(typeof (T));
         }
