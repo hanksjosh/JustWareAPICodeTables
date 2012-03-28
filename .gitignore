@@ -50,3 +50,5 @@ _ReSharper*/
 # Custom
 *.private
 readme.html
+/JustWareApiCodeTables/obj
+/JustWareApiCodeTables/obj

@@ -1,6 +1,0 @@
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\_tmpIntermediateAT\JustWareApiCodeTables.csprojResolveAssemblyReference.cache
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\JustWareApiCodeTables.dll.config
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\_tmpIntermediateAT\JustWareApiCodeTables.dll
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\_tmpIntermediateAT\JustWareApiCodeTables.pdb
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\JustWareApiCodeTables.dll
-C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\AutoTest.Net\JustWareApiCodeTables.pdb
