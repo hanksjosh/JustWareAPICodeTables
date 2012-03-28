@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="441fb39e-0d8a-4ab0-ba94-77b2983067f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JustWareApi.xsd" MetadataType="Schema" ID="c3da826c-85d2-4797-8ae1-20ebe696541a" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?xsd=xsd3" />
+    <MetadataFile FileName="JustWareApi1.xsd" MetadataType="Schema" ID="c87d7b67-1d13-40b2-bbfd-e4a116204a59" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?xsd=xsd0" />
+    <MetadataFile FileName="JustWareApi.disco" MetadataType="Disco" ID="5192dce9-2705-4eb7-aaf6-55f43a183449" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?disco" />
+    <MetadataFile FileName="JustWareApi2.xsd" MetadataType="Schema" ID="4d203cff-1d8a-41a8-9b05-04d88d2cc1fb" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?xsd=xsd2" />
+    <MetadataFile FileName="JustWareApi3.xsd" MetadataType="Schema" ID="806fe3b9-8dd3-443f-851a-f70007a62ca4" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?xsd=xsd4" />
+    <MetadataFile FileName="JustWareApi4.xsd" MetadataType="Schema" ID="178beb88-eb1c-4686-adc4-11cba7927ba7" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?xsd=xsd1" />
+    <MetadataFile FileName="JustWareApi.wsdl" MetadataType="Wsdl" ID="15e74951-716e-4171-978c-464a3004d651" SourceId="1" SourceUrl="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

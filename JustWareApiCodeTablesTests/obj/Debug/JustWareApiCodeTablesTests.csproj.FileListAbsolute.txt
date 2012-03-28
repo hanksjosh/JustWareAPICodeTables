@@ -1,0 +1,19 @@
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.pdb
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\Moq.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.pdb
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\Moq.pdb
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\bin\Debug\Moq.xml
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.csprojResolveAssemblyReference.cache
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.pdb
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.dll
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.pdb
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.dll
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.pdb
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\Moq.pdb
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\Moq.xml
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.csprojResolveAssemblyReference.cache
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.dll
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.pdb

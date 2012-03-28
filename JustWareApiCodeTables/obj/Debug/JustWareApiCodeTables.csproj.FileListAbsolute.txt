@@ -1,0 +1,12 @@
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll.config
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.pdb
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.dll
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.pdb
+C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.csprojResolveAssemblyReference.cache
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll.config
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.pdb
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.csprojResolveAssemblyReference.cache
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.dll
+C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\obj\Debug\JustWareApiCodeTables.pdb

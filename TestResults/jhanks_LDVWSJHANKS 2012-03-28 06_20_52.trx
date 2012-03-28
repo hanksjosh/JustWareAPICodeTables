@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="86996dd8-a5a7-4012-9113-a7115e362ebe" name="jhanks@LDVWSJHANKS 2012-03-28 06:20:52" runUser="NDT\jhanks" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="cbb2812e-2baf-4038-b7a4-d6a98ca15848">
+    <Deployment runDeploymentRoot="jhanks_LDVWSJHANKS 2012-03-28 06_20_52">
+      <DeploymentItem filename="C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debug\Moq.dll" />
+      <DeploymentItem filename="C:\GitHub\JustWareApiCodeTables\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-28T06:20:52.8679900-06:00" queuing="2012-03-28T06:20:54.5351567-06:00" start="2012-03-28T06:20:54.5921624-06:00" finish="2012-03-28T06:20:55.6262658-06:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="14" executed="14" passed="13" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="QueryCodeTableTest_QueriesFromCache" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="f0760835-39a7-b45c-6ca4-fee2a7ab9879">
+      <Execution id="8c9ab6f9-7707-4336-a20c-da2d03454c06" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCodeTableTest_QueriesFromCache" />
+    </UnitTest>
+    <UnitTest name="QueryCacheCodeTableTest_NotInDictionary" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="a4a0418f-c59f-e31c-f292-af5c4802cccc">
+      <Execution id="63387d4d-02c5-4661-806f-a02d9073170e" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeTableCacheTest, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCacheCodeTableTest_NotInDictionary" />
+    </UnitTest>
+    <UnitTest name="AddToDictionaryTest" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="31b5041f-52c2-5ec2-1568-8b06e5e9e865">
+      <Execution id="308849d6-dc23-4629-977d-da2a46113e08" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.WebCodeTableCacheTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddToDictionaryTest" />
+    </UnitTest>
+    <UnitTest name="GetCodeTableTest" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="ba231313-87e5-18e7-1dc4-cf54db88b495">
+      <Execution id="9f4b8a36-bcef-4a49-b752-f984a2af3238" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCodeTableTest" />
+    </UnitTest>
+    <UnitTest name="GetCodeDescription_FillsCache" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="878d963d-ff51-6e0e-2c58-07510808f9a2">
+      <Execution id="246c4375-7568-4955-b410-b65a45aa66f6" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCodeDescription_FillsCache" />
+    </UnitTest>
+    <UnitTest name="QueryCodeTableTest_NoCache" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="1b2f2c3e-92e2-7178-2a35-e33f1a11a371">
+      <Execution id="c6a86771-fa1d-4dfb-9f70-0bc31bf16c66" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCodeTableTest_NoCache" />
+    </UnitTest>
+    <UnitTest name="AddToDictionaryTest" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="390d3fb6-2f77-0894-0e04-6b86064dbd11">
+      <Execution id="77b6e4f0-1275-41e3-82c8-e7d2c7db681f" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeTableCacheTest, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddToDictionaryTest" />
+    </UnitTest>
+    <UnitTest name="AddToDictionary_OverwritesWhatsAlreadyCached" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="0d7cd1d8-5a84-4012-43d6-c3981bcbedb1">
+      <Execution id="c7f81d75-5795-4ecb-9843-d2cd80d99730" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeTableCacheTest, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddToDictionary_OverwritesWhatsAlreadyCached" />
+    </UnitTest>
+    <UnitTest name="GetCodeTable_GetsFromCacheIfThere" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="20586226-0666-b013-a658-74b691be2812">
+      <Execution id="3848d5e8-1e76-4d4e-9a76-cb70d3bd7085" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCodeTable_GetsFromCacheIfThere" />
+    </UnitTest>
+    <UnitTest name="GetCodeTable_NoCache_DoesntBlowup" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="546064f8-4ae8-51de-0e99-763faf9c905d">
+      <Execution id="f3319c43-a78b-4a88-9068-a3f1566ca379" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCodeTable_NoCache_DoesntBlowup" />
+    </UnitTest>
+    <UnitTest name="GetCodeDescriptionTest" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="5cdc72f8-d302-6d07-540c-8738c91e637d">
+      <Execution id="163b669d-ecab-4235-a0a4-f7cd92c289fb" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCodeDescriptionTest" />
+    </UnitTest>
+    <UnitTest name="QueryCodeTableTest_PutsCodeTableInCache" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="fe1b4062-fa69-8db2-8063-a85761fb996e">
+      <Execution id="03a1ad98-79e3-49e3-aae4-f327eab29618" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeLookupHelperTests, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCodeTableTest_PutsCodeTableInCache" />
+    </UnitTest>
+    <UnitTest name="QueryCacheCodeTableTest_WithQuery" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="af5429bd-5a60-4771-8c1a-3afe905bff85">
+      <Execution id="b573e229-7851-4f1e-9265-b2ab65ed711f" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeTableCacheTest, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCacheCodeTableTest_WithQuery" />
+    </UnitTest>
+    <UnitTest name="QueryCacheCodeTableTest" storage="c:\github\justwareapicodetables\justwareapicodetablestests\bin\debug\justwareapicodetablestests.dll" id="fc2c06da-d2ed-e3c5-a59d-d16db0feab80">
+      <Execution id="298e1585-b112-4430-9401-47a17cd2c703" />
+      <TestMethod codeBase="C:/GitHub/JustWareApiCodeTables/JustWareApiCodeTablesTests/bin/Debug/JustWareApiCodeTablesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="JustWareApiCodeTablesTests.CodeTableCacheTest, JustWareApiCodeTablesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="QueryCacheCodeTableTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0d7cd1d8-5a84-4012-43d6-c3981bcbedb1" executionId="c7f81d75-5795-4ecb-9843-d2cd80d99730" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="390d3fb6-2f77-0894-0e04-6b86064dbd11" executionId="77b6e4f0-1275-41e3-82c8-e7d2c7db681f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31b5041f-52c2-5ec2-1568-8b06e5e9e865" executionId="308849d6-dc23-4629-977d-da2a46113e08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="878d963d-ff51-6e0e-2c58-07510808f9a2" executionId="246c4375-7568-4955-b410-b65a45aa66f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cdc72f8-d302-6d07-540c-8738c91e637d" executionId="163b669d-ecab-4235-a0a4-f7cd92c289fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20586226-0666-b013-a658-74b691be2812" executionId="3848d5e8-1e76-4d4e-9a76-cb70d3bd7085" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="546064f8-4ae8-51de-0e99-763faf9c905d" executionId="f3319c43-a78b-4a88-9068-a3f1566ca379" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba231313-87e5-18e7-1dc4-cf54db88b495" executionId="9f4b8a36-bcef-4a49-b752-f984a2af3238" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc2c06da-d2ed-e3c5-a59d-d16db0feab80" executionId="298e1585-b112-4430-9401-47a17cd2c703" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a4a0418f-c59f-e31c-f292-af5c4802cccc" executionId="63387d4d-02c5-4661-806f-a02d9073170e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af5429bd-5a60-4771-8c1a-3afe905bff85" executionId="b573e229-7851-4f1e-9265-b2ab65ed711f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b2f2c3e-92e2-7178-2a35-e33f1a11a371" executionId="c6a86771-fa1d-4dfb-9f70-0bc31bf16c66" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe1b4062-fa69-8db2-8063-a85761fb996e" executionId="03a1ad98-79e3-49e3-aae4-f327eab29618" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0760835-39a7-b45c-6ca4-fee2a7ab9879" executionId="8c9ab6f9-7707-4336-a20c-da2d03454c06" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c7f81d75-5795-4ecb-9843-d2cd80d99730" testId="0d7cd1d8-5a84-4012-43d6-c3981bcbedb1" testName="AddToDictionary_OverwritesWhatsAlreadyCached" computerName="LDVWSJHANKS" duration="00:00:00.0226786" startTime="2012-03-28T06:20:54.6201652-06:00" endTime="2012-03-28T06:20:55.0142046-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7f81d75-5795-4ecb-9843-d2cd80d99730">
+    </UnitTestResult>
+    <UnitTestResult executionId="77b6e4f0-1275-41e3-82c8-e7d2c7db681f" testId="390d3fb6-2f77-0894-0e04-6b86064dbd11" testName="AddToDictionaryTest" computerName="LDVWSJHANKS" duration="00:00:00.0002827" startTime="2012-03-28T06:20:55.0142046-06:00" endTime="2012-03-28T06:20:55.0162048-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77b6e4f0-1275-41e3-82c8-e7d2c7db681f">
+    </UnitTestResult>
+    <UnitTestResult executionId="308849d6-dc23-4629-977d-da2a46113e08" testId="31b5041f-52c2-5ec2-1568-8b06e5e9e865" testName="AddToDictionaryTest" computerName="LDVWSJHANKS" duration="00:00:00.0770650" startTime="2012-03-28T06:20:55.0172049-06:00" endTime="2012-03-28T06:20:55.0962128-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="308849d6-dc23-4629-977d-da2a46113e08">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method JustWareApiCodeTablesTests.WebCodeTableCacheTests.AddToDictionaryTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at System.Web.Caching.Cache.Insert(String key, Object value)
+   at System.Web.Caching.Cache.set_Item(String key, Object value)
+   at JustWareApiCodeTables.WebCodeTableCache.AddToDictionary[T](List`1 codeTableList) in C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTables\WebCodeTableCache.cs:line 20
+   at JustWareApiCodeTablesTests.WebCodeTableCacheTests.AddToDictionaryTest() in C:\Random Programming Stuff\ApiCacheCodeTableTester\JustWareApiCodeTablesTests\WebCodeTableCacheTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="246c4375-7568-4955-b410-b65a45aa66f6" testId="878d963d-ff51-6e0e-2c58-07510808f9a2" testName="GetCodeDescription_FillsCache" computerName="LDVWSJHANKS" duration="00:00:00.4468860" startTime="2012-03-28T06:20:55.0962128-06:00" endTime="2012-03-28T06:20:55.5452577-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="246c4375-7568-4955-b410-b65a45aa66f6">
+    </UnitTestResult>
+    <UnitTestResult executionId="163b669d-ecab-4235-a0a4-f7cd92c289fb" testId="5cdc72f8-d302-6d07-540c-8738c91e637d" testName="GetCodeDescriptionTest" computerName="LDVWSJHANKS" duration="00:00:00.0020542" startTime="2012-03-28T06:20:55.5462578-06:00" endTime="2012-03-28T06:20:55.5492581-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="163b669d-ecab-4235-a0a4-f7cd92c289fb">
+    </UnitTestResult>
+    <UnitTestResult executionId="3848d5e8-1e76-4d4e-9a76-cb70d3bd7085" testId="20586226-0666-b013-a658-74b691be2812" testName="GetCodeTable_GetsFromCacheIfThere" computerName="LDVWSJHANKS" duration="00:00:00.0045299" startTime="2012-03-28T06:20:55.5502582-06:00" endTime="2012-03-28T06:20:55.5562588-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3848d5e8-1e76-4d4e-9a76-cb70d3bd7085">
+    </UnitTestResult>
+    <UnitTestResult executionId="f3319c43-a78b-4a88-9068-a3f1566ca379" testId="546064f8-4ae8-51de-0e99-763faf9c905d" testName="GetCodeTable_NoCache_DoesntBlowup" computerName="LDVWSJHANKS" duration="00:00:00.0019240" startTime="2012-03-28T06:20:55.5572589-06:00" endTime="2012-03-28T06:20:55.5602592-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3319c43-a78b-4a88-9068-a3f1566ca379">
+    </UnitTestResult>
+    <UnitTestResult executionId="9f4b8a36-bcef-4a49-b752-f984a2af3238" testId="ba231313-87e5-18e7-1dc4-cf54db88b495" testName="GetCodeTableTest" computerName="LDVWSJHANKS" duration="00:00:00.0037254" startTime="2012-03-28T06:20:55.5602592-06:00" endTime="2012-03-28T06:20:55.5662598-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f4b8a36-bcef-4a49-b752-f984a2af3238">
+    </UnitTestResult>
+    <UnitTestResult executionId="298e1585-b112-4430-9401-47a17cd2c703" testId="fc2c06da-d2ed-e3c5-a59d-d16db0feab80" testName="QueryCacheCodeTableTest" computerName="LDVWSJHANKS" duration="00:00:00.0161648" startTime="2012-03-28T06:20:55.5662598-06:00" endTime="2012-03-28T06:20:55.5842616-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="298e1585-b112-4430-9401-47a17cd2c703">
+    </UnitTestResult>
+    <UnitTestResult executionId="63387d4d-02c5-4661-806f-a02d9073170e" testId="a4a0418f-c59f-e31c-f292-af5c4802cccc" testName="QueryCacheCodeTableTest_NotInDictionary" computerName="LDVWSJHANKS" duration="00:00:00.0001919" startTime="2012-03-28T06:20:55.5852617-06:00" endTime="2012-03-28T06:20:55.5862618-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63387d4d-02c5-4661-806f-a02d9073170e">
+    </UnitTestResult>
+    <UnitTestResult executionId="b573e229-7851-4f1e-9265-b2ab65ed711f" testId="af5429bd-5a60-4771-8c1a-3afe905bff85" testName="QueryCacheCodeTableTest_WithQuery" computerName="LDVWSJHANKS" duration="00:00:00.0037024" startTime="2012-03-28T06:20:55.5872619-06:00" endTime="2012-03-28T06:20:55.5922624-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b573e229-7851-4f1e-9265-b2ab65ed711f">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6a86771-fa1d-4dfb-9f70-0bc31bf16c66" testId="1b2f2c3e-92e2-7178-2a35-e33f1a11a371" testName="QueryCodeTableTest_NoCache" computerName="LDVWSJHANKS" duration="00:00:00.0016631" startTime="2012-03-28T06:20:55.5932625-06:00" endTime="2012-03-28T06:20:55.5962628-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6a86771-fa1d-4dfb-9f70-0bc31bf16c66">
+    </UnitTestResult>
+    <UnitTestResult executionId="03a1ad98-79e3-49e3-aae4-f327eab29618" testId="fe1b4062-fa69-8db2-8063-a85761fb996e" testName="QueryCodeTableTest_PutsCodeTableInCache" computerName="LDVWSJHANKS" duration="00:00:00.0031872" startTime="2012-03-28T06:20:55.5962628-06:00" endTime="2012-03-28T06:20:55.6012633-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03a1ad98-79e3-49e3-aae4-f327eab29618">
+    </UnitTestResult>
+    <UnitTestResult executionId="8c9ab6f9-7707-4336-a20c-da2d03454c06" testId="f0760835-39a7-b45c-6ca4-fee2a7ab9879" testName="QueryCodeTableTest_QueriesFromCache" computerName="LDVWSJHANKS" duration="00:00:00.0032390" startTime="2012-03-28T06:20:55.6022634-06:00" endTime="2012-03-28T06:20:55.6072639-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c9ab6f9-7707-4336-a20c-da2d03454c06">
+    </UnitTestResult>
+  </Results>
+</TestRun>
