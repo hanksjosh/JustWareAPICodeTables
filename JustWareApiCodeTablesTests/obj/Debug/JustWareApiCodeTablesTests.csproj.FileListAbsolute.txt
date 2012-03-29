@@ -26,3 +26,12 @@ C:\Users\jhanks\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\bin\Debu
 C:\Users\jhanks\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.csprojResolveAssemblyReference.cache
 C:\Users\jhanks\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.dll
 C:\Users\jhanks\GitHub\JustWareApiCodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.pdb
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.dll
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTablesTests.pdb
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.dll
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\Moq.dll
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\JustWareApiCodeTables.pdb
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\bin\Debug\Moq.xml
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.csprojResolveAssemblyReference.cache
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.dll
+C:\Users\jhanks\JustWareAPICodeTables\JustWareApiCodeTablesTests\obj\Debug\JustWareApiCodeTablesTests.pdb
