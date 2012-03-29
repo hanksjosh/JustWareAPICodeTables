@@ -163,5 +163,55 @@ namespace JustWareApiCodeTablesTests
             cache.Verify(c=>c.AddToDictionary(It.Is<List<CaseType>>(l=>l.Count() == 2)), Times.Once(), "Full CodeTable was not cached.");
         }
 
+
+				[TestMethod]
+				public void ClearCache_CallsClearCacheOnCodeTableCache()
+				{
+					Mock<IJustWareApi> api = new Mock<IJustWareApi>();
+					Mock<ICodeTableCache> cache = new Mock<ICodeTableCache>();
+					CodeLookupHelper helper = new CodeLookupHelper(api.Object, cache.Object);
+
+					helper.ClearCache<CaseType>();
+
+					cache.Verify(c => c.ClearCache<CaseType>(), Times.Once(), "ClearCache was not called on the CodeTableCache");
+				}
+
+				[TestMethod]
+				public void ClearCache_HandlesNoCodeTableCache()
+				{
+					Mock<IJustWareApi> api = new Mock<IJustWareApi>();
+					Mock<ICodeTableCache> cache = new Mock<ICodeTableCache>();
+					CodeLookupHelper helper = new CodeLookupHelper(api.Object);
+
+					helper.ClearCache<CaseType>();
+
+					//As long as we didn't crash because we have no cache, everything is happy.
+				}
+
+
+				[TestMethod]
+				public void ClearAllCache_CallsClearAllCacheOnCodeTableCache()
+				{
+					Mock<IJustWareApi> api = new Mock<IJustWareApi>();
+					Mock<ICodeTableCache> cache = new Mock<ICodeTableCache>();
+					CodeLookupHelper helper = new CodeLookupHelper(api.Object, cache.Object);
+
+					helper.ClearAllCache();
+
+					cache.Verify(c => c.ClearAllCache(), Times.Once(), "ClearAllCache was not called on the CodeTableCache");
+				}
+
+				[TestMethod]
+				public void ClearAllCache_HandlesNoCodeTableCache()
+				{
+					Mock<IJustWareApi> api = new Mock<IJustWareApi>();
+					Mock<ICodeTableCache> cache = new Mock<ICodeTableCache>();
+					CodeLookupHelper helper = new CodeLookupHelper(api.Object);
+
+					helper.ClearAllCache();
+
+					//As long as we didn't crash because we have no cache, everything is happy.
+				}
+
     }
 }

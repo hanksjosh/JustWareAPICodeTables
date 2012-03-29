@@ -41,8 +41,15 @@ namespace JustWareApiCodeTables
             return CodeTableDictionary.ContainsKey(typeof (T));
         }
 
+				public void ClearCache<T>()
+				{
+					CodeTableDictionary.Remove(typeof(T));
+				}
 
-
+				public void ClearAllCache()
+				{
+					CodeTableDictionary.Clear();
+				}
 
     }
 

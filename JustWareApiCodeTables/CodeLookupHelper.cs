@@ -93,5 +93,21 @@ namespace JustWareApiCodeTables
                 throw new ApplicationException(String.Format("Entity '{0}' is not a code type.", entityType.Name));
             }
         }
+
+				public void ClearCache<T>()
+				{
+					if (_codeTableCache != null)
+					{
+						_codeTableCache.ClearCache<T>();
+					}
+				}
+
+				public void ClearAllCache()
+				{
+					if (_codeTableCache != null)
+					{
+						_codeTableCache.ClearAllCache();
+					}
+				}
     }
 }
