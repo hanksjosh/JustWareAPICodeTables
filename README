@@ -1,0 +1,1 @@
+JustWareAPICodeTables is a library for use when writing to the API for JustWare, a New Dawn Technologies product www.newdawn.com . It provides an abstracted module for accessing and caching the code tables used when communicating with the API.
