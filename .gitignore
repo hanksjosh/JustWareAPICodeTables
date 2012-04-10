@@ -52,3 +52,4 @@ _ReSharper*/
 readme.html
 /JustWareApiCodeTables/obj
 /JustWareApiCodeTables/obj
+*.ncrunchsolution

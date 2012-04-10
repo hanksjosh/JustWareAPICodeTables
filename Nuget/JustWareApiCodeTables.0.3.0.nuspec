@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.3.0</version>
+    <authors>jhanks</authors>
+    <owners>hanksjosh</owners>
+    <projectUrl>https://github.com/hanksjosh/JustWareAPICodeTables</projectUrl>
+    <id>JustWareApiCodeTables</id>
+    <title>JustWare API Code Tables</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for accesing the JustWare API code tables, with caching.</description>
+    <summary />
+    <releaseNotes>Added support for clearing the cache</releaseNotes>
+  </metadata>
+  <files>
+    <file src="..\JustWareApiCodeTables\bin\Debug\JustWareApiCodeTables.dll" target="lib\JustWareApiCodeTables.dll" />
+  </files>
+</package>

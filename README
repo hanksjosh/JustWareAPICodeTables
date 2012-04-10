@@ -1,0 +1,14 @@
+JustWareAPICodeTables is a library for use when writing to the API for JustWare, a New Dawn Technologies product www.newdawn.com . It provides an abstracted module for accessing and caching the code tables used when communicating with the API.
+
+The primary class is the CodeLookupHelper. It provides the following functions (Where T is the CodeTable type):
+string GetCodeDescription<T>(string code)
+List<T> QueryCodeTable<T>(string query)
+List<T> GetCodeTable<T>()
+ClearCache<T>()
+ClearAllCache()
+
+When any of these functions are called, if that code table has already been queried, it uses the cached version.  If the code table is not in the cache, it gets the entire code table from the API, and caches it for future use.  The Clear functions can be used to clear an individual CodeTable from the Cache, or to clear all the entire cache.
+
+There are two classes that implement the cache, CodeTableCache, or WebCodeTableCache.  The CodeTableCache is for use in a windows-based application or service, whereas the WebCodeTableCache is used for a Web Application, and uses a System.Web.Caching.Cache to cache the data. 
+
+To compile the solution, all that should be required is VS 2010 or VS11 beta, and the NuGet Package Manager.  The tests use the Moq framework, but if NuGet is installed, it should take care of that for you.
