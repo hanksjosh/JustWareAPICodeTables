@@ -40,5 +40,15 @@ namespace JustWareApiCodeTables
             }
             return false;
         }
+
+				public void ClearCache<T>()
+				{
+					_cache.Remove(typeof(T).Name);
+				}
+
+				public void ClearAllCache()
+				{
+					throw new NotSupportedException("ClearAllCache is not supported for the WebCodeTableCache");
+				}
     }
 }

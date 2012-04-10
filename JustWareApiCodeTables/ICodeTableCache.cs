@@ -8,5 +8,7 @@ namespace JustWareApiCodeTables
         void AddToDictionary<T>(List<T> codeTableList);
         List<T> QueryCacheCodeTable<T>(string query);
         bool IsCodeTableCached<T>();
+				void ClearCache<T>();
+				void ClearAllCache();
     }
 }

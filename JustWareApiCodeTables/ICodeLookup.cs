@@ -8,5 +8,7 @@ namespace JustWareApiCodeTables
         string GetCodeDescription<T>(string code);
         List<T> GetCodeTable<T>();
         List<T> QueryCodeTable<T>(string query);
+				void ClearCache<T>();
+				void ClearAllCache();
     }
 }

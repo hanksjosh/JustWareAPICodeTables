@@ -84,5 +84,65 @@ namespace JustWareApiCodeTablesTests
             Assert.IsNotNull(result.FirstOrDefault(ct => ct.Code == "C2"), "Result did not have the right data");
         }
 
+
+				[TestMethod]
+				public void ClearCacheTest()
+				{
+					CodeTableCache cache = new CodeTableCache();
+					List<CaseType> typeList = new List<CaseType>();
+					typeList.Add(new CaseType() { Code = "C", Description = "Desc" });
+					typeList.Add(new CaseType() { Code = "C2", Description = "Desc2" });
+
+					cache.CodeTableDictionary.Add(typeof(CaseType), typeList);
+
+					List<CaseType> cachedList = cache.QueryCacheCodeTable<CaseType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(2, cachedList.Count(), "Initial count was not 2");
+
+					cache.ClearCache<CaseType>();
+
+					cachedList = cache.QueryCacheCodeTable<CaseType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(0, cachedList.Count(), "Count was not 0 after clearing.");
+				}
+
+				[TestMethod]
+				public void ClearCache_TypeNotInDictionary()
+				{
+					CodeTableCache cache = new CodeTableCache();
+					cache.ClearCache<CaseType>();
+
+					List<CaseType> cachedList = cache.QueryCacheCodeTable<CaseType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(0, cachedList.Count(), "Count was not 0 after clearing.");
+				}
+
+
+				[TestMethod]
+				public void ClearAllCacheTest()
+				{
+					CodeTableCache cache = new CodeTableCache();
+					List<CaseType> typeList = new List<CaseType>();
+					typeList.Add(new CaseType() { Code = "C", Description = "Desc" });
+					typeList.Add(new CaseType() { Code = "C2", Description = "Desc2" });
+					List<CaseStatusType> csList = new List<CaseStatusType>();
+					csList.Add(new CaseStatusType() { Code = "C", Description = "Desc" });
+					csList.Add(new CaseStatusType() { Code = "C2", Description = "Desc2" });
+
+					cache.CodeTableDictionary.Add(typeof(CaseType), typeList);
+					cache.CodeTableDictionary.Add(typeof(CaseStatusType), csList);
+
+					List<CaseType> cachedList = cache.QueryCacheCodeTable<CaseType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(2, cachedList.Count(), "Initial count of Case Types was not 2");
+
+					List<CaseStatusType> cachedCSList = cache.QueryCacheCodeTable<CaseStatusType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(2, cachedList.Count(), "Initial count of Case Statuses was not 2");
+					
+					cache.ClearAllCache();
+
+					cachedList = cache.QueryCacheCodeTable<CaseType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(0, cachedList.Count(), "Case Type Count was not 0 after clearing.");
+
+					cachedCSList = cache.QueryCacheCodeTable<CaseStatusType>(CodeLookupHelper.ALL_CODES_QUERY);
+					Assert.AreEqual(0, cachedCSList.Count(), "Case Status Count was not 0 after clearing.");
+				}
+
     }
 }
