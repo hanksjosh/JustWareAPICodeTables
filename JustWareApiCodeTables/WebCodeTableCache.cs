@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Text;
 using System.Web.Caching;
 
@@ -26,7 +27,8 @@ namespace JustWareApiCodeTables
             List<T> cachedList = (List<T>)_cache[typeof (T).Name];
             if (cachedList != null)
             {
-                resultList = cachedList;
+                IQueryable<T> currentList = cachedList.AsQueryable();
+                resultList = currentList.DynamicWhere(query).ToList();
             }
             return resultList;
         }
