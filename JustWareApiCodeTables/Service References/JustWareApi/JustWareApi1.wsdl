@@ -1,0 +1,3299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JustWareApi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="JustWareApi_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" />
+      <xsd:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Ndt.Api" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJustWareApi_FindEventStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindObligationTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindObligationTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindObligationTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindObligationTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAddressTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddressTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAddressTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddressTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhoneTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhoneTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhoneTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhoneTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEmailTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEmailTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEmailTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEmailTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindRelationshipTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindRelationshipTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindRelationshipTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindRelationshipTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPleaTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPleaTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPleaTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPleaTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDispositionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDispositionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDispositionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDispositionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCountyTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCountyTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCountyTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCountyTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJurisdictionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindJurisdictionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJurisdictionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindJurisdictionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAgencyTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAgencyTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAgencyTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAgencyTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCategoryTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCategoryTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCategoryTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCategoryTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePaymentItemTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePaymentItemTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePaymentItemTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePaymentItemTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNoteTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNoteTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNoteTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNoteTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventLocationTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventLocationTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventLocationTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventLocationTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNumberTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNumberTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNumberTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNumberTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindInvolveTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindInvolveTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindInvolveTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindInvolveTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributeCodeListTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributeCodeListTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributeCodeListTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributeCodeListTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributeCodeListTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributeCodeListTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributeCodeListTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributeCodeListTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeEnhancementTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeEnhancementTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeEnhancementTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeEnhancementTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeHistoryTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeHistoryTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeHistoryTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeHistoryTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocketInstanceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocketInstanceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocketInstanceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocketInstanceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibitStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibitStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibitStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibitStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibitTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibitTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibitTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibitTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindIntoxicantTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindIntoxicantTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindIntoxicantTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindIntoxicantTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributeCodeListTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributeCodeListTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributeCodeListTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributeCodeListTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPaymentStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPaymentStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPaymentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPaymentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhysicalLocationTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhysicalLocationTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhysicalLocationTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhysicalLocationTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteAttributeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteAttributeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteAttributeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteAttributeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteCategoryTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteCategoryTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteCategoryTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteCategoryTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteClassTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteClassTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteClassTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteClassTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteSeverityTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteSeverityTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteSeverityTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteSeverityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteTextTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteTextTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteTextTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteTextTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTimeTrackingStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTimeTrackingStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTimeTrackingStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTimeTrackingStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTimeTrackingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTimeTrackingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTimeTrackingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTimeTrackingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetJusticeBrokerMessageQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJusticeBrokerMessageQueue" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetJusticeBrokerMessageQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJusticeBrokerMessageQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJusticeBrokerMessageQueues_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindJusticeBrokerMessageQueues" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJusticeBrokerMessageQueues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindJusticeBrokerMessageQueuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_SetFileAccessCredentialsForFileUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFileAccessCredentialsForFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_SetFileAccessCredentialsForFileUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFileAccessCredentialsForFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCase" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCases" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhone" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhones_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhones" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmail" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEmails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEmails" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEmails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNumber" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNote" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNotes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameEvent" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameEventWithNameID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameEventWithNameID" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameEventWithNameID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameEventWithNameIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameEvents" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetEventInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetEventInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseNote" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNotes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseEvent" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseEvents" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetAgency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgency" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetAgency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAgencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAgencies" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindAgencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAgenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocation" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindLocations" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCharge" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCharges_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCharges" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCharges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetJudgment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJudgment" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetJudgment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJudgmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJudgments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindJudgments" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindJudgments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindJudgmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetSentence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentence" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetSentence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSentences_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSentences" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSentences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSentencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseTask" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseTasks" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameTask" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameTaskWithNameID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameTaskWithNameID" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameTaskWithNameID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameTaskWithNameIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameTasks" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetTaskInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetTaskInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTaskInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTaskInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTaskInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTaskInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCorrespondenceInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCorrespondenceInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCorrespondenceInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCorrespondenceInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCorrespondenceInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCorrespondenceInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCorrespondenceInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCorrespondenceInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameCorrespondence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameCorrespondence" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameCorrespondence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameCorrespondenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameCorrespondenceWithNameID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameCorrespondenceWithNameID" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameCorrespondenceWithNameID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameCorrespondenceWithNameIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameCorrespondences_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameCorrespondences" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameCorrespondences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameCorrespondencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseCorrespondence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseCorrespondence" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseCorrespondence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseCorrespondenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseCorrespondences_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseCorrespondences" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseCorrespondences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseCorrespondencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCondition" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindConditions" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeAgency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeAgency" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeAgency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeAgencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAgencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAgencies" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeAgencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeAgenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeEnhancement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeEnhancement" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeEnhancement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeEnhancementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeEnhancements_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeEnhancements" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeEnhancements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeEnhancementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPendingTimeTrackingEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTimeTrackingEntry" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPendingTimeTrackingEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTimeTrackingEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPendingTimeTrackingEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPendingTimeTrackingEntries" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPendingTimeTrackingEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPendingTimeTrackingEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetIntoxicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntoxicant" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetIntoxicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntoxicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindIntoxicants_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindIntoxicants" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindIntoxicants_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindIntoxicantsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetExhibit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibit" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetExhibit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNonCollectableFinancial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNonCollectableFinancial" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameNonCollectableFinancial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameNonCollectableFinancialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNonCollectableFinancials_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNonCollectableFinancials" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameNonCollectableFinancials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameNonCollectableFinancialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPhysicalLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicalLocation" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPhysicalLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicalLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhysicalLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhysicalLocations" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPhysicalLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPhysicalLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseNonCollectableFinancial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseNonCollectableFinancial" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseNonCollectableFinancial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseNonCollectableFinancialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNonCollectableFinancials_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNonCollectableFinancials" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseNonCollectableFinancials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseNonCollectableFinancialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCollectableFinancialInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCollectableFinancialInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCollectableFinancialInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCollectableFinancialInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCollectableFinancialInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCollectableFinancialInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCollectableFinancialInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCollectableFinancialInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNameDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNameDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNameDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNameDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetDocumentInvolvedName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentInvolvedName" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetDocumentInvolvedName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentInvolvedNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocumentInvolvedNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocumentInvolvedNames" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocumentInvolvedNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocumentInvolvedNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetApplicationPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationPerson" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetApplicationPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindApplicationPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindApplicationPersons" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindApplicationPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindApplicationPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeHistory" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetChargeHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChargeHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeHistories" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindChargeHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChargeHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatute" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatutes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatuteAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuteAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatuteAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuteAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatuteText_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuteText" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetStatuteText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuteTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteTexts_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteTexts" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindStatuteTexts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStatuteTextsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetObligation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObligation" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetObligation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObligationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindObligations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindObligations" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindObligations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindObligationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayment" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPayments" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTransfers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTransfers" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTransfers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTransfersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPrimaryNameRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryNameRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetPrimaryNameRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryNameRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPrimaryNameRelationships_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPrimaryNameRelationships" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindPrimaryNameRelationships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPrimaryNameRelationshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetSecondaryNameRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecondaryNameRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetSecondaryNameRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecondaryNameRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSecondaryNameRelationships_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSecondaryNameRelationships" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSecondaryNameRelationships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSecondaryNameRelationshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseRelationship_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseRelationship" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCaseRelationship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseRelationships_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseRelationships" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseRelationships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseRelationshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCasePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCasePayment" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCasePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCasePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePayments" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCasePaymentItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCasePaymentItem" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetNonCasePaymentItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonCasePaymentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePaymentItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePaymentItems" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCasePaymentItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCasePaymentItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCalendarDocket_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalendarDocket" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCalendarDocket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalendarDocketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCalendarDockets_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCalendarDockets" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCalendarDockets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCalendarDocketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetDocketInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocketInstance" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetDocketInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocketInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocketInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocketInstances" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocketInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocketInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_Submit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Submit" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_Submit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_RequestFileDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFileDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_RequestFileDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFileDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_RequestFileUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_RequestFileUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FinalizeFileUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizeFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FinalizeFileUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizeFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCallerNameID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCallerNameID" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_GetCallerNameID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCallerNameIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindEventTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEventTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseStatusTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseStatusTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCaseStatusTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseStatusTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCorrespondenceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCorrespondenceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindCorrespondenceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCorrespondenceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSentenceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSentenceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindSentenceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSentenceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindConditionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindConditionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindConditionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindConditionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTaskTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTaskTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindTaskTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTaskTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCollectableFinancialTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCollectableFinancialTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindNonCollectableFinancialTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindNonCollectableFinancialTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocumentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocumentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IJustWareApi_FindDocumentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocumentTypesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJustWareApi">
+    <wsdl:operation name="FindEventStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEventStatusTypes" message="tns:IJustWareApi_FindEventStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEventStatusTypesResponse" message="tns:IJustWareApi_FindEventStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindObligationTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindObligationTypes" message="tns:IJustWareApi_FindObligationTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindObligationTypesResponse" message="tns:IJustWareApi_FindObligationTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAddressTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindAddressTypes" message="tns:IJustWareApi_FindAddressTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindAddressTypesResponse" message="tns:IJustWareApi_FindAddressTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPhoneTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPhoneTypes" message="tns:IJustWareApi_FindPhoneTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPhoneTypesResponse" message="tns:IJustWareApi_FindPhoneTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEmailTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEmailTypes" message="tns:IJustWareApi_FindEmailTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEmailTypesResponse" message="tns:IJustWareApi_FindEmailTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindRelationshipTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindRelationshipTypes" message="tns:IJustWareApi_FindRelationshipTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindRelationshipTypesResponse" message="tns:IJustWareApi_FindRelationshipTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPleaTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPleaTypes" message="tns:IJustWareApi_FindPleaTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPleaTypesResponse" message="tns:IJustWareApi_FindPleaTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDispositionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindDispositionTypes" message="tns:IJustWareApi_FindDispositionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindDispositionTypesResponse" message="tns:IJustWareApi_FindDispositionTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCountyTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCountyTypes" message="tns:IJustWareApi_FindCountyTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCountyTypesResponse" message="tns:IJustWareApi_FindCountyTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindJurisdictionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindJurisdictionTypes" message="tns:IJustWareApi_FindJurisdictionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindJurisdictionTypesResponse" message="tns:IJustWareApi_FindJurisdictionTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAgencyTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindAgencyTypes" message="tns:IJustWareApi_FindAgencyTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindAgencyTypesResponse" message="tns:IJustWareApi_FindAgencyTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCategoryTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCategoryTypes" message="tns:IJustWareApi_FindCategoryTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCategoryTypesResponse" message="tns:IJustWareApi_FindCategoryTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePaymentItemTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePaymentItemTypes" message="tns:IJustWareApi_FindNonCasePaymentItemTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePaymentItemTypesResponse" message="tns:IJustWareApi_FindNonCasePaymentItemTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNoteTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNoteTypes" message="tns:IJustWareApi_FindCaseNoteTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNoteTypesResponse" message="tns:IJustWareApi_FindCaseNoteTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEventLocationTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEventLocationTypes" message="tns:IJustWareApi_FindEventLocationTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEventLocationTypesResponse" message="tns:IJustWareApi_FindEventLocationTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNumberTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNumberTypes" message="tns:IJustWareApi_FindNumberTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNumberTypesResponse" message="tns:IJustWareApi_FindNumberTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindInvolveTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindInvolveTypes" message="tns:IJustWareApi_FindInvolveTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindInvolveTypesResponse" message="tns:IJustWareApi_FindInvolveTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributeTypes" message="tns:IJustWareApi_FindCaseAttributeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributeTypesResponse" message="tns:IJustWareApi_FindCaseAttributeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributeCodeListTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributeCodeListTypes" message="tns:IJustWareApi_FindCaseAttributeCodeListTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributeCodeListTypesResponse" message="tns:IJustWareApi_FindCaseAttributeCodeListTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributeTypes" message="tns:IJustWareApi_FindChargeAttributeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributeTypesResponse" message="tns:IJustWareApi_FindChargeAttributeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributeCodeListTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributeCodeListTypes" message="tns:IJustWareApi_FindChargeAttributeCodeListTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributeCodeListTypesResponse" message="tns:IJustWareApi_FindChargeAttributeCodeListTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeEnhancementTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeEnhancementTypes" message="tns:IJustWareApi_FindChargeEnhancementTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeEnhancementTypesResponse" message="tns:IJustWareApi_FindChargeEnhancementTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeHistoryTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeHistoryTypes" message="tns:IJustWareApi_FindChargeHistoryTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeHistoryTypesResponse" message="tns:IJustWareApi_FindChargeHistoryTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeTypes" message="tns:IJustWareApi_FindChargeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeTypesResponse" message="tns:IJustWareApi_FindChargeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocketInstanceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindDocketInstanceTypes" message="tns:IJustWareApi_FindDocketInstanceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindDocketInstanceTypesResponse" message="tns:IJustWareApi_FindDocketInstanceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibitStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibitStatusTypes" message="tns:IJustWareApi_FindExhibitStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibitStatusTypesResponse" message="tns:IJustWareApi_FindExhibitStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibitTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibitTypes" message="tns:IJustWareApi_FindExhibitTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibitTypesResponse" message="tns:IJustWareApi_FindExhibitTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindIntoxicantTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindIntoxicantTypes" message="tns:IJustWareApi_FindIntoxicantTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindIntoxicantTypesResponse" message="tns:IJustWareApi_FindIntoxicantTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributeCodeListTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributeCodeListTypes" message="tns:IJustWareApi_FindNameAttributeCodeListTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributeCodeListTypesResponse" message="tns:IJustWareApi_FindNameAttributeCodeListTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributeTypes" message="tns:IJustWareApi_FindNameAttributeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributeTypesResponse" message="tns:IJustWareApi_FindNameAttributeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameTypes" message="tns:IJustWareApi_FindNameTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameTypesResponse" message="tns:IJustWareApi_FindNameTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPaymentStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPaymentStatusTypes" message="tns:IJustWareApi_FindPaymentStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPaymentStatusTypesResponse" message="tns:IJustWareApi_FindPaymentStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPaymentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPaymentTypes" message="tns:IJustWareApi_FindPaymentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPaymentTypesResponse" message="tns:IJustWareApi_FindPaymentTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPhysicalLocationTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPhysicalLocationTypes" message="tns:IJustWareApi_FindPhysicalLocationTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPhysicalLocationTypesResponse" message="tns:IJustWareApi_FindPhysicalLocationTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteAttributeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteAttributeTypes" message="tns:IJustWareApi_FindStatuteAttributeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteAttributeTypesResponse" message="tns:IJustWareApi_FindStatuteAttributeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteCategoryTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteCategoryTypes" message="tns:IJustWareApi_FindStatuteCategoryTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteCategoryTypesResponse" message="tns:IJustWareApi_FindStatuteCategoryTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteClassTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteClassTypes" message="tns:IJustWareApi_FindStatuteClassTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteClassTypesResponse" message="tns:IJustWareApi_FindStatuteClassTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteSeverityTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteSeverityTypes" message="tns:IJustWareApi_FindStatuteSeverityTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteSeverityTypesResponse" message="tns:IJustWareApi_FindStatuteSeverityTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteTextTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteTextTypes" message="tns:IJustWareApi_FindStatuteTextTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteTextTypesResponse" message="tns:IJustWareApi_FindStatuteTextTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTimeTrackingStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindTimeTrackingStatusTypes" message="tns:IJustWareApi_FindTimeTrackingStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindTimeTrackingStatusTypesResponse" message="tns:IJustWareApi_FindTimeTrackingStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTimeTrackingTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindTimeTrackingTypes" message="tns:IJustWareApi_FindTimeTrackingTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindTimeTrackingTypesResponse" message="tns:IJustWareApi_FindTimeTrackingTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJusticeBrokerMessageQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetJusticeBrokerMessageQueue" message="tns:IJustWareApi_GetJusticeBrokerMessageQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetJusticeBrokerMessageQueueResponse" message="tns:IJustWareApi_GetJusticeBrokerMessageQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindJusticeBrokerMessageQueues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindJusticeBrokerMessageQueues" message="tns:IJustWareApi_FindJusticeBrokerMessageQueues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindJusticeBrokerMessageQueuesResponse" message="tns:IJustWareApi_FindJusticeBrokerMessageQueues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFileAccessCredentialsForFileUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/SetFileAccessCredentialsForFileUpload" message="tns:IJustWareApi_SetFileAccessCredentialsForFileUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/SetFileAccessCredentialsForFileUploadResponse" message="tns:IJustWareApi_SetFileAccessCredentialsForFileUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetName" message="tns:IJustWareApi_GetName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameResponse" message="tns:IJustWareApi_GetName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNames" message="tns:IJustWareApi_FindNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNamesResponse" message="tns:IJustWareApi_FindNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetAddress" message="tns:IJustWareApi_GetAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetAddressResponse" message="tns:IJustWareApi_GetAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindAddresses" message="tns:IJustWareApi_FindAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindAddressesResponse" message="tns:IJustWareApi_FindAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCase" message="tns:IJustWareApi_GetCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseResponse" message="tns:IJustWareApi_GetCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCases" message="tns:IJustWareApi_FindCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCasesResponse" message="tns:IJustWareApi_FindCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetInvolvedName" message="tns:IJustWareApi_GetInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetInvolvedNameResponse" message="tns:IJustWareApi_GetInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindInvolvedNames" message="tns:IJustWareApi_FindInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindInvolvedNamesResponse" message="tns:IJustWareApi_FindInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetPhone" message="tns:IJustWareApi_GetPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetPhoneResponse" message="tns:IJustWareApi_GetPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPhones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPhones" message="tns:IJustWareApi_FindPhones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPhonesResponse" message="tns:IJustWareApi_FindPhones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetEmail" message="tns:IJustWareApi_GetEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetEmailResponse" message="tns:IJustWareApi_GetEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEmails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEmails" message="tns:IJustWareApi_FindEmails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEmailsResponse" message="tns:IJustWareApi_FindEmails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNumber" message="tns:IJustWareApi_GetNameNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNumberResponse" message="tns:IJustWareApi_GetNameNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNumbers" message="tns:IJustWareApi_FindNameNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNumbersResponse" message="tns:IJustWareApi_FindNameNumbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameAttribute" message="tns:IJustWareApi_GetNameAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameAttributeResponse" message="tns:IJustWareApi_GetNameAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributes" message="tns:IJustWareApi_FindNameAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameAttributesResponse" message="tns:IJustWareApi_FindNameAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNote" message="tns:IJustWareApi_GetNameNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNoteResponse" message="tns:IJustWareApi_GetNameNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNotes" message="tns:IJustWareApi_FindNameNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNotesResponse" message="tns:IJustWareApi_FindNameNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameEvent" message="tns:IJustWareApi_GetNameEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameEventResponse" message="tns:IJustWareApi_GetNameEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameEventWithNameID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameEventWithNameID" message="tns:IJustWareApi_GetNameEventWithNameID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameEventWithNameIDResponse" message="tns:IJustWareApi_GetNameEventWithNameID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameEvents" message="tns:IJustWareApi_FindNameEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameEventsResponse" message="tns:IJustWareApi_FindNameEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetEventInvolvedName" message="tns:IJustWareApi_GetEventInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetEventInvolvedNameResponse" message="tns:IJustWareApi_GetEventInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEventInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEventInvolvedNames" message="tns:IJustWareApi_FindEventInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEventInvolvedNamesResponse" message="tns:IJustWareApi_FindEventInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseAttribute" message="tns:IJustWareApi_GetCaseAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseAttributeResponse" message="tns:IJustWareApi_GetCaseAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributes" message="tns:IJustWareApi_FindCaseAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseAttributesResponse" message="tns:IJustWareApi_FindCaseAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseNote" message="tns:IJustWareApi_GetCaseNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseNoteResponse" message="tns:IJustWareApi_GetCaseNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNotes" message="tns:IJustWareApi_FindCaseNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNotesResponse" message="tns:IJustWareApi_FindCaseNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseEvent" message="tns:IJustWareApi_GetCaseEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseEventResponse" message="tns:IJustWareApi_GetCaseEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseEvents" message="tns:IJustWareApi_FindCaseEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseEventsResponse" message="tns:IJustWareApi_FindCaseEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetAgency" message="tns:IJustWareApi_GetAgency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetAgencyResponse" message="tns:IJustWareApi_GetAgency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAgencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindAgencies" message="tns:IJustWareApi_FindAgencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindAgenciesResponse" message="tns:IJustWareApi_FindAgencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetLocation" message="tns:IJustWareApi_GetLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetLocationResponse" message="tns:IJustWareApi_GetLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindLocations" message="tns:IJustWareApi_FindLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindLocationsResponse" message="tns:IJustWareApi_FindLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCharge" message="tns:IJustWareApi_GetCharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeResponse" message="tns:IJustWareApi_GetCharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCharges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCharges" message="tns:IJustWareApi_FindCharges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargesResponse" message="tns:IJustWareApi_FindCharges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeInvolvedName" message="tns:IJustWareApi_GetChargeInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeInvolvedNameResponse" message="tns:IJustWareApi_GetChargeInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeInvolvedNames" message="tns:IJustWareApi_FindChargeInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeInvolvedNamesResponse" message="tns:IJustWareApi_FindChargeInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeAttribute" message="tns:IJustWareApi_GetChargeAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeAttributeResponse" message="tns:IJustWareApi_GetChargeAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributes" message="tns:IJustWareApi_FindChargeAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAttributesResponse" message="tns:IJustWareApi_FindChargeAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJudgment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetJudgment" message="tns:IJustWareApi_GetJudgment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetJudgmentResponse" message="tns:IJustWareApi_GetJudgment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindJudgments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindJudgments" message="tns:IJustWareApi_FindJudgments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindJudgmentsResponse" message="tns:IJustWareApi_FindJudgments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSentence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetSentence" message="tns:IJustWareApi_GetSentence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetSentenceResponse" message="tns:IJustWareApi_GetSentence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSentences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindSentences" message="tns:IJustWareApi_FindSentences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindSentencesResponse" message="tns:IJustWareApi_FindSentences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseTask" message="tns:IJustWareApi_GetCaseTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseTaskResponse" message="tns:IJustWareApi_GetCaseTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseTasks" message="tns:IJustWareApi_FindCaseTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseTasksResponse" message="tns:IJustWareApi_FindCaseTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameTask" message="tns:IJustWareApi_GetNameTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameTaskResponse" message="tns:IJustWareApi_GetNameTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameTaskWithNameID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameTaskWithNameID" message="tns:IJustWareApi_GetNameTaskWithNameID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameTaskWithNameIDResponse" message="tns:IJustWareApi_GetNameTaskWithNameID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameTasks" message="tns:IJustWareApi_FindNameTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameTasksResponse" message="tns:IJustWareApi_FindNameTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetTaskInvolvedName" message="tns:IJustWareApi_GetTaskInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetTaskInvolvedNameResponse" message="tns:IJustWareApi_GetTaskInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTaskInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindTaskInvolvedNames" message="tns:IJustWareApi_FindTaskInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindTaskInvolvedNamesResponse" message="tns:IJustWareApi_FindTaskInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCorrespondenceInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCorrespondenceInvolvedName" message="tns:IJustWareApi_GetCorrespondenceInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCorrespondenceInvolvedNameResponse" message="tns:IJustWareApi_GetCorrespondenceInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCorrespondenceInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCorrespondenceInvolvedNames" message="tns:IJustWareApi_FindCorrespondenceInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCorrespondenceInvolvedNamesResponse" message="tns:IJustWareApi_FindCorrespondenceInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameCorrespondence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameCorrespondence" message="tns:IJustWareApi_GetNameCorrespondence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameCorrespondenceResponse" message="tns:IJustWareApi_GetNameCorrespondence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameCorrespondenceWithNameID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameCorrespondenceWithNameID" message="tns:IJustWareApi_GetNameCorrespondenceWithNameID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameCorrespondenceWithNameIDResponse" message="tns:IJustWareApi_GetNameCorrespondenceWithNameID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameCorrespondences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameCorrespondences" message="tns:IJustWareApi_FindNameCorrespondences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameCorrespondencesResponse" message="tns:IJustWareApi_FindNameCorrespondences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseCorrespondence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseCorrespondence" message="tns:IJustWareApi_GetCaseCorrespondence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseCorrespondenceResponse" message="tns:IJustWareApi_GetCaseCorrespondence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseCorrespondences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseCorrespondences" message="tns:IJustWareApi_FindCaseCorrespondences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseCorrespondencesResponse" message="tns:IJustWareApi_FindCaseCorrespondences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCondition" message="tns:IJustWareApi_GetCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetConditionResponse" message="tns:IJustWareApi_GetCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindConditions" message="tns:IJustWareApi_FindConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindConditionsResponse" message="tns:IJustWareApi_FindConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeAgency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeAgency" message="tns:IJustWareApi_GetChargeAgency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeAgencyResponse" message="tns:IJustWareApi_GetChargeAgency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAgencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAgencies" message="tns:IJustWareApi_FindChargeAgencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeAgenciesResponse" message="tns:IJustWareApi_FindChargeAgencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeEnhancement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeEnhancement" message="tns:IJustWareApi_GetChargeEnhancement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeEnhancementResponse" message="tns:IJustWareApi_GetChargeEnhancement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeEnhancements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeEnhancements" message="tns:IJustWareApi_FindChargeEnhancements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeEnhancementsResponse" message="tns:IJustWareApi_FindChargeEnhancements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTimeTrackingEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetPendingTimeTrackingEntry" message="tns:IJustWareApi_GetPendingTimeTrackingEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetPendingTimeTrackingEntryResponse" message="tns:IJustWareApi_GetPendingTimeTrackingEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPendingTimeTrackingEntries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPendingTimeTrackingEntries" message="tns:IJustWareApi_FindPendingTimeTrackingEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPendingTimeTrackingEntriesResponse" message="tns:IJustWareApi_FindPendingTimeTrackingEntries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntoxicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetIntoxicant" message="tns:IJustWareApi_GetIntoxicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetIntoxicantResponse" message="tns:IJustWareApi_GetIntoxicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindIntoxicants">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindIntoxicants" message="tns:IJustWareApi_FindIntoxicants_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindIntoxicantsResponse" message="tns:IJustWareApi_FindIntoxicants_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetExhibit" message="tns:IJustWareApi_GetExhibit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetExhibitResponse" message="tns:IJustWareApi_GetExhibit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibits" message="tns:IJustWareApi_FindExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindExhibitsResponse" message="tns:IJustWareApi_FindExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNonCollectableFinancial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNonCollectableFinancial" message="tns:IJustWareApi_GetNameNonCollectableFinancial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameNonCollectableFinancialResponse" message="tns:IJustWareApi_GetNameNonCollectableFinancial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNonCollectableFinancials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNonCollectableFinancials" message="tns:IJustWareApi_FindNameNonCollectableFinancials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameNonCollectableFinancialsResponse" message="tns:IJustWareApi_FindNameNonCollectableFinancials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetPhysicalLocation" message="tns:IJustWareApi_GetPhysicalLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetPhysicalLocationResponse" message="tns:IJustWareApi_GetPhysicalLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPhysicalLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPhysicalLocations" message="tns:IJustWareApi_FindPhysicalLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPhysicalLocationsResponse" message="tns:IJustWareApi_FindPhysicalLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseNonCollectableFinancial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseNonCollectableFinancial" message="tns:IJustWareApi_GetCaseNonCollectableFinancial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseNonCollectableFinancialResponse" message="tns:IJustWareApi_GetCaseNonCollectableFinancial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNonCollectableFinancials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNonCollectableFinancials" message="tns:IJustWareApi_FindCaseNonCollectableFinancials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseNonCollectableFinancialsResponse" message="tns:IJustWareApi_FindCaseNonCollectableFinancials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCollectableFinancialInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCollectableFinancialInvolvedName" message="tns:IJustWareApi_GetNonCollectableFinancialInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCollectableFinancialInvolvedNameResponse" message="tns:IJustWareApi_GetNonCollectableFinancialInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCollectableFinancialInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialInvolvedNames" message="tns:IJustWareApi_FindNonCollectableFinancialInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialInvolvedNamesResponse" message="tns:IJustWareApi_FindNonCollectableFinancialInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNameDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNameDocument" message="tns:IJustWareApi_GetNameDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNameDocumentResponse" message="tns:IJustWareApi_GetNameDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNameDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNameDocuments" message="tns:IJustWareApi_FindNameDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNameDocumentsResponse" message="tns:IJustWareApi_FindNameDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseDocument" message="tns:IJustWareApi_GetCaseDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseDocumentResponse" message="tns:IJustWareApi_GetCaseDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseDocuments" message="tns:IJustWareApi_FindCaseDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseDocumentsResponse" message="tns:IJustWareApi_FindCaseDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentInvolvedName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetDocumentInvolvedName" message="tns:IJustWareApi_GetDocumentInvolvedName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetDocumentInvolvedNameResponse" message="tns:IJustWareApi_GetDocumentInvolvedName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocumentInvolvedNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindDocumentInvolvedNames" message="tns:IJustWareApi_FindDocumentInvolvedNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindDocumentInvolvedNamesResponse" message="tns:IJustWareApi_FindDocumentInvolvedNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetApplicationPerson" message="tns:IJustWareApi_GetApplicationPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetApplicationPersonResponse" message="tns:IJustWareApi_GetApplicationPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindApplicationPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindApplicationPersons" message="tns:IJustWareApi_FindApplicationPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindApplicationPersonsResponse" message="tns:IJustWareApi_FindApplicationPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeHistory" message="tns:IJustWareApi_GetChargeHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetChargeHistoryResponse" message="tns:IJustWareApi_GetChargeHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeHistories" message="tns:IJustWareApi_FindChargeHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindChargeHistoriesResponse" message="tns:IJustWareApi_FindChargeHistories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetStatute" message="tns:IJustWareApi_GetStatute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetStatuteResponse" message="tns:IJustWareApi_GetStatute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatutes" message="tns:IJustWareApi_FindStatutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatutesResponse" message="tns:IJustWareApi_FindStatutes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuteAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetStatuteAttribute" message="tns:IJustWareApi_GetStatuteAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetStatuteAttributeResponse" message="tns:IJustWareApi_GetStatuteAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteAttributes" message="tns:IJustWareApi_FindStatuteAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteAttributesResponse" message="tns:IJustWareApi_FindStatuteAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuteText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetStatuteText" message="tns:IJustWareApi_GetStatuteText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetStatuteTextResponse" message="tns:IJustWareApi_GetStatuteText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteTexts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteTexts" message="tns:IJustWareApi_FindStatuteTexts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindStatuteTextsResponse" message="tns:IJustWareApi_FindStatuteTexts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObligation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetObligation" message="tns:IJustWareApi_GetObligation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetObligationResponse" message="tns:IJustWareApi_GetObligation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindObligations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindObligations" message="tns:IJustWareApi_FindObligations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindObligationsResponse" message="tns:IJustWareApi_FindObligations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetPayment" message="tns:IJustWareApi_GetPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetPaymentResponse" message="tns:IJustWareApi_GetPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPayments" message="tns:IJustWareApi_FindPayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPaymentsResponse" message="tns:IJustWareApi_FindPayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetTransfer" message="tns:IJustWareApi_GetTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetTransferResponse" message="tns:IJustWareApi_GetTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTransfers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindTransfers" message="tns:IJustWareApi_FindTransfers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindTransfersResponse" message="tns:IJustWareApi_FindTransfers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryNameRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetPrimaryNameRelationship" message="tns:IJustWareApi_GetPrimaryNameRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetPrimaryNameRelationshipResponse" message="tns:IJustWareApi_GetPrimaryNameRelationship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPrimaryNameRelationships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindPrimaryNameRelationships" message="tns:IJustWareApi_FindPrimaryNameRelationships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindPrimaryNameRelationshipsResponse" message="tns:IJustWareApi_FindPrimaryNameRelationships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecondaryNameRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetSecondaryNameRelationship" message="tns:IJustWareApi_GetSecondaryNameRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetSecondaryNameRelationshipResponse" message="tns:IJustWareApi_GetSecondaryNameRelationship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSecondaryNameRelationships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindSecondaryNameRelationships" message="tns:IJustWareApi_FindSecondaryNameRelationships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindSecondaryNameRelationshipsResponse" message="tns:IJustWareApi_FindSecondaryNameRelationships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseRelationship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseRelationship" message="tns:IJustWareApi_GetCaseRelationship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCaseRelationshipResponse" message="tns:IJustWareApi_GetCaseRelationship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseRelationships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseRelationships" message="tns:IJustWareApi_FindCaseRelationships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseRelationshipsResponse" message="tns:IJustWareApi_FindCaseRelationships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCasePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCasePayment" message="tns:IJustWareApi_GetNonCasePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCasePaymentResponse" message="tns:IJustWareApi_GetNonCasePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePayments" message="tns:IJustWareApi_FindNonCasePayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePaymentsResponse" message="tns:IJustWareApi_FindNonCasePayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCasePaymentItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCasePaymentItem" message="tns:IJustWareApi_GetNonCasePaymentItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetNonCasePaymentItemResponse" message="tns:IJustWareApi_GetNonCasePaymentItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePaymentItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePaymentItems" message="tns:IJustWareApi_FindNonCasePaymentItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCasePaymentItemsResponse" message="tns:IJustWareApi_FindNonCasePaymentItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarDocket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCalendarDocket" message="tns:IJustWareApi_GetCalendarDocket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCalendarDocketResponse" message="tns:IJustWareApi_GetCalendarDocket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCalendarDockets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCalendarDockets" message="tns:IJustWareApi_FindCalendarDockets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCalendarDocketsResponse" message="tns:IJustWareApi_FindCalendarDockets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocketInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetDocketInstance" message="tns:IJustWareApi_GetDocketInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetDocketInstanceResponse" message="tns:IJustWareApi_GetDocketInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocketInstances">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindDocketInstances" message="tns:IJustWareApi_FindDocketInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindDocketInstancesResponse" message="tns:IJustWareApi_FindDocketInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/Submit" message="tns:IJustWareApi_Submit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/SubmitResponse" message="tns:IJustWareApi_Submit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestFileDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/RequestFileDownload" message="tns:IJustWareApi_RequestFileDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/RequestFileDownloadResponse" message="tns:IJustWareApi_RequestFileDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestFileUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/RequestFileUpload" message="tns:IJustWareApi_RequestFileUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/RequestFileUploadResponse" message="tns:IJustWareApi_RequestFileUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeFileUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FinalizeFileUpload" message="tns:IJustWareApi_FinalizeFileUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FinalizeFileUploadResponse" message="tns:IJustWareApi_FinalizeFileUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCallerNameID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/GetCallerNameID" message="tns:IJustWareApi_GetCallerNameID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/GetCallerNameIDResponse" message="tns:IJustWareApi_GetCallerNameID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseTypes" message="tns:IJustWareApi_FindCaseTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseTypesResponse" message="tns:IJustWareApi_FindCaseTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEventTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindEventTypes" message="tns:IJustWareApi_FindEventTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindEventTypesResponse" message="tns:IJustWareApi_FindEventTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseStatusTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseStatusTypes" message="tns:IJustWareApi_FindCaseStatusTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCaseStatusTypesResponse" message="tns:IJustWareApi_FindCaseStatusTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCorrespondenceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindCorrespondenceTypes" message="tns:IJustWareApi_FindCorrespondenceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindCorrespondenceTypesResponse" message="tns:IJustWareApi_FindCorrespondenceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSentenceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindSentenceTypes" message="tns:IJustWareApi_FindSentenceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindSentenceTypesResponse" message="tns:IJustWareApi_FindSentenceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindConditionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindConditionTypes" message="tns:IJustWareApi_FindConditionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindConditionTypesResponse" message="tns:IJustWareApi_FindConditionTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTaskTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindTaskTypes" message="tns:IJustWareApi_FindTaskTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindTaskTypesResponse" message="tns:IJustWareApi_FindTaskTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCollectableFinancialTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialTypes" message="tns:IJustWareApi_FindNonCollectableFinancialTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialTypesResponse" message="tns:IJustWareApi_FindNonCollectableFinancialTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocumentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJustWareApi/FindDocumentTypes" message="tns:IJustWareApi_FindDocumentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJustWareApi/FindDocumentTypesResponse" message="tns:IJustWareApi_FindDocumentTypes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JustWareApi" type="tns:IJustWareApi">
+    <wsp:PolicyReference URI="#JustWareApi_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindEventStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEventStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObligationTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindObligationTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAddressTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindAddressTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPhoneTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPhoneTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmailTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEmailTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindRelationshipTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindRelationshipTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPleaTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPleaTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDispositionTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindDispositionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCountyTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCountyTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindJurisdictionTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindJurisdictionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAgencyTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindAgencyTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCategoryTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCategoryTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePaymentItemTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNonCasePaymentItemTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNoteTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseNoteTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEventLocationTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEventLocationTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNumberTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNumberTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindInvolveTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindInvolveTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributeTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseAttributeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributeCodeListTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseAttributeCodeListTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributeTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeAttributeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributeCodeListTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeAttributeCodeListTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeEnhancementTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeEnhancementTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeHistoryTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeHistoryTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocketInstanceTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindDocketInstanceTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibitStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindExhibitStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibitTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindExhibitTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindIntoxicantTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindIntoxicantTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributeCodeListTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameAttributeCodeListTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributeTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameAttributeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPaymentStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPaymentStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPaymentTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPaymentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPhysicalLocationTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPhysicalLocationTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteAttributeTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteAttributeTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteCategoryTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteCategoryTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteClassTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteClassTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteSeverityTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteSeverityTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteTextTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteTextTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTimeTrackingStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindTimeTrackingStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTimeTrackingTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindTimeTrackingTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJusticeBrokerMessageQueue">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetJusticeBrokerMessageQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindJusticeBrokerMessageQueues">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindJusticeBrokerMessageQueues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFileAccessCredentialsForFileUpload">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/SetFileAccessCredentialsForFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAddresses">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCase">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCases">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhone">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPhones">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPhones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmails">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNumber">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNumbers">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameAttribute">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameAttributes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNote">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNotes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameEvent">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameEventWithNameID">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameEventWithNameID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameEvents">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetEventInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEventInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEventInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseAttribute">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseAttributes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseNote">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNotes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseEvent">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseEvents">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgency">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetAgency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAgencies">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindAgencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindLocations">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCharge">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCharges">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCharges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetChargeInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeAttribute">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetChargeAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAttributes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJudgment">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetJudgment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindJudgments">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindJudgments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSentence">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetSentence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSentences">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindSentences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseTask">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseTasks">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameTask">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameTaskWithNameID">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameTaskWithNameID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameTasks">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetTaskInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTaskInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindTaskInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCorrespondenceInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCorrespondenceInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCorrespondenceInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCorrespondenceInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameCorrespondence">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameCorrespondence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameCorrespondenceWithNameID">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameCorrespondenceWithNameID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameCorrespondences">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameCorrespondences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseCorrespondence">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseCorrespondence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseCorrespondences">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseCorrespondences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCondition">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindConditions">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindConditions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeAgency">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetChargeAgency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeAgencies">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeAgencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeEnhancement">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetChargeEnhancement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeEnhancements">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeEnhancements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTimeTrackingEntry">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetPendingTimeTrackingEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPendingTimeTrackingEntries">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPendingTimeTrackingEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntoxicant">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetIntoxicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindIntoxicants">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindIntoxicants" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibit">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetExhibit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindExhibits">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameNonCollectableFinancial">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameNonCollectableFinancial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameNonCollectableFinancials">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameNonCollectableFinancials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicalLocation">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetPhysicalLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPhysicalLocations">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPhysicalLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseNonCollectableFinancial">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseNonCollectableFinancial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseNonCollectableFinancials">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseNonCollectableFinancials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCollectableFinancialInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNonCollectableFinancialInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCollectableFinancialInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNameDocument">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNameDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNameDocuments">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNameDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDocument">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseDocuments">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentInvolvedName">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetDocumentInvolvedName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocumentInvolvedNames">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindDocumentInvolvedNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationPerson">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetApplicationPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindApplicationPersons">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindApplicationPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeHistory">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetChargeHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindChargeHistories">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindChargeHistories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatute">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetStatute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatutes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuteAttribute">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetStatuteAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteAttributes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuteText">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetStatuteText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStatuteTexts">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindStatuteTexts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObligation">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetObligation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindObligations">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindObligations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPayments">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransfer">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTransfers">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindTransfers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryNameRelationship">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetPrimaryNameRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPrimaryNameRelationships">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindPrimaryNameRelationships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecondaryNameRelationship">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetSecondaryNameRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSecondaryNameRelationships">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindSecondaryNameRelationships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseRelationship">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCaseRelationship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseRelationships">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseRelationships" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCasePayment">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNonCasePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePayments">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNonCasePayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonCasePaymentItem">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetNonCasePaymentItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCasePaymentItems">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNonCasePaymentItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarDocket">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCalendarDocket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCalendarDockets">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCalendarDockets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocketInstance">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetDocketInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocketInstances">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindDocketInstances" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFileDownload">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/RequestFileDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFileUpload">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/RequestFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeFileUpload">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FinalizeFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCallerNameID">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/GetCallerNameID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEventTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindEventTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseStatusTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCaseStatusTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCorrespondenceTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindCorrespondenceTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSentenceTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindSentenceTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindConditionTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindConditionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTaskTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindTaskTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindNonCollectableFinancialTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindNonCollectableFinancialTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocumentTypes">
+      <soap:operation soapAction="http://tempuri.org/IJustWareApi/FindDocumentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JustWareApi">
+    <wsdl:port name="JustWareApi" binding="tns:JustWareApi">
+      <soap:address location="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
