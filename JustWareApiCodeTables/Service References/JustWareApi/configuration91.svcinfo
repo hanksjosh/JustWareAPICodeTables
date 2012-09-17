@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="VZqONco4VJo2VJzH5CFStLZh8sc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="w4V7VFA8ljmQbI0JWcHKZioP6Lw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="JustWareApi">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="JustWareApi" contract="JustWareApi.IJustWareApi" bindingType="basicHttpBinding" address="https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc" bindingConfiguration="JustWareApi">
+    <endpoint name="JustWareApi" contract="JustWareApi.IJustWareApi" bindingType="basicHttpBinding" address="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc" bindingConfiguration="JustWareApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://ldvwsjhanks.logan.newdawntech.com/API57/JustWareApi.svc</serializedValue>
+          <serializedValue>https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

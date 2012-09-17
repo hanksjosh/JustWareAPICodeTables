@@ -1,0 +1,2539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" />
+  <xs:import schemaLocation="https://devapi.logan.newdawntech.com/UCAPI/JustWareApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Ndt.Api" />
+  <xs:element name="FindEventStatusTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventStatusTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEventStatusTypesResult" nillable="true" type="q2:ArrayOfEventStatusType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindObligationTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindObligationTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindObligationTypesResult" nillable="true" type="q4:ArrayOfObligationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAddressTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAddressTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindAddressTypesResult" nillable="true" type="q6:ArrayOfAddressType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhoneTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhoneTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPhoneTypesResult" nillable="true" type="q8:ArrayOfPhoneType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEmailTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEmailTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEmailTypesResult" nillable="true" type="q10:ArrayOfEmailType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRelationshipTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q11:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRelationshipTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindRelationshipTypesResult" nillable="true" type="q12:ArrayOfRelationshipType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPleaTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPleaTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPleaTypesResult" nillable="true" type="q14:ArrayOfPleaType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDispositionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q15:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDispositionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindDispositionTypesResult" nillable="true" type="q16:ArrayOfDispositionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCountyTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q17:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCountyTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCountyTypesResult" nillable="true" type="q18:ArrayOfCountyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJurisdictionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q19:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJurisdictionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindJurisdictionTypesResult" nillable="true" type="q20:ArrayOfJurisdictionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAgencyTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q21:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAgencyTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindAgencyTypesResult" nillable="true" type="q22:ArrayOfAgencyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCategoryTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q23:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCategoryTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCategoryTypesResult" nillable="true" type="q24:ArrayOfCategoryType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePaymentItemTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q25:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePaymentItemTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNonCasePaymentItemTypesResult" nillable="true" type="q26:ArrayOfNonCasePaymentItemType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNoteTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q27:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNoteTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseNoteTypesResult" nillable="true" type="q28:ArrayOfCaseNoteType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventLocationTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q29:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventLocationTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEventLocationTypesResult" nillable="true" type="q30:ArrayOfEventLocationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNumberTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q31:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNumberTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNumberTypesResult" nillable="true" type="q32:ArrayOfNumberType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindInvolveTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q33:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindInvolveTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindInvolveTypesResult" nillable="true" type="q34:ArrayOfInvolveType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q35:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseAttributeTypesResult" nillable="true" type="q36:ArrayOfCaseAttributeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributeCodeListTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q37:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributeCodeListTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseAttributeCodeListTypesResult" nillable="true" type="q38:ArrayOfCaseAttributeCodeListType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q39:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeAttributeTypesResult" nillable="true" type="q40:ArrayOfChargeAttributeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributeCodeListTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q41:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributeCodeListTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeAttributeCodeListTypesResult" nillable="true" type="q42:ArrayOfChargeAttributeCodeListType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeEnhancementTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q43:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeEnhancementTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeEnhancementTypesResult" nillable="true" type="q44:ArrayOfChargeEnhancementType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeHistoryTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q45:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeHistoryTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeHistoryTypesResult" nillable="true" type="q46:ArrayOfChargeHistoryType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q47:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeTypesResult" nillable="true" type="q48:ArrayOfChargeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocketInstanceTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q49="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q49:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocketInstanceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindDocketInstanceTypesResult" nillable="true" type="q50:ArrayOfDocketInstanceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibitStatusTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q51:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibitStatusTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindExhibitStatusTypesResult" nillable="true" type="q52:ArrayOfExhibitStatusType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibitTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q53="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q53:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibitTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindExhibitTypesResult" nillable="true" type="q54:ArrayOfExhibitType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindIntoxicantTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q55:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindIntoxicantTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindIntoxicantTypesResult" nillable="true" type="q56:ArrayOfIntoxicantType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributeCodeListTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q57:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributeCodeListTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameAttributeCodeListTypesResult" nillable="true" type="q58:ArrayOfNameAttributeCodeListType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q59:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameAttributeTypesResult" nillable="true" type="q60:ArrayOfNameAttributeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q61:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameTypesResult" nillable="true" type="q62:ArrayOfNameType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentStatusTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q63="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q63:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentStatusTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPaymentStatusTypesResult" nillable="true" type="q64:ArrayOfPaymentStatusType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q65="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q65:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPaymentTypesResult" nillable="true" type="q66:ArrayOfPaymentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhysicalLocationTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q67="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q67:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhysicalLocationTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPhysicalLocationTypesResult" nillable="true" type="q68:ArrayOfPhysicalLocationType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteAttributeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q69="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q69:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteAttributeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteAttributeTypesResult" nillable="true" type="q70:ArrayOfStatuteAttributeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteCategoryTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q71="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q71:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteCategoryTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteCategoryTypesResult" nillable="true" type="q72:ArrayOfStatuteCategoryType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteClassTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q73="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q73:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteClassTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteClassTypesResult" nillable="true" type="q74:ArrayOfStatuteClassType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteSeverityTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q75="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q75:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteSeverityTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteSeverityTypesResult" nillable="true" type="q76:ArrayOfStatuteSeverityType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteTextTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q77="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q77:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteTextTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteTextTypesResult" nillable="true" type="q78:ArrayOfStatuteTextType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTimeTrackingStatusTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q79="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q79:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTimeTrackingStatusTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindTimeTrackingStatusTypesResult" nillable="true" type="q80:ArrayOfTimeTrackingStatusType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTimeTrackingTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q81="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q81:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTimeTrackingTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindTimeTrackingTypesResult" nillable="true" type="q82:ArrayOfTimeTrackingType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJusticeBrokerMessageQueue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q83="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q83:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJusticeBrokerMessageQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetJusticeBrokerMessageQueueResult" nillable="true" type="q84:JusticeBrokerMessageQueue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJusticeBrokerMessageQueues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q85="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q85:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJusticeBrokerMessageQueuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindJusticeBrokerMessageQueuesResult" nillable="true" type="q86:ArrayOfJusticeBrokerMessageQueue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFileAccessCredentialsForFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="domain" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFileAccessCredentialsForFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q87="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q87:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameResult" nillable="true" type="q88:Name" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q89="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q89:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNamesResult" nillable="true" type="q90:ArrayOfName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetAddressResult" nillable="true" type="q91:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindAddressesResult" nillable="true" type="q92:ArrayOfAddress" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q93="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q93:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseResult" nillable="true" type="q94:Case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q95="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q95:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCasesResult" nillable="true" type="q96:ArrayOfCase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q97="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q97:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetInvolvedNameResult" nillable="true" type="q98:CaseInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q99="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q99:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindInvolvedNamesResult" nillable="true" type="q100:ArrayOfCaseInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetPhoneResult" nillable="true" type="q101:Phone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhonesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPhonesResult" nillable="true" type="q102:ArrayOfPhone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetEmailResult" nillable="true" type="q103:Email" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEmails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEmailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEmailsResult" nillable="true" type="q104:ArrayOfEmail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameNumberResult" nillable="true" type="q105:NameNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNumbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNumbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameNumbersResult" nillable="true" type="q106:ArrayOfNameNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameAttributeResult" nillable="true" type="q107:NameAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameAttributesResult" nillable="true" type="q108:ArrayOfNameAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameNoteResult" nillable="true" type="q109:NameNote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameNotesResult" nillable="true" type="q110:ArrayOfNameNote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameEventResult" nillable="true" type="q111:NameEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameEventWithNameID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element minOccurs="0" name="nameID" type="xs:int" />
+        <xs:element xmlns:q112="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q112:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameEventWithNameIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameEventWithNameIDResult" nillable="true" type="q113:NameEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameEventsResult" nillable="true" type="q114:ArrayOfNameEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q115="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q115:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetEventInvolvedNameResult" nillable="true" type="q116:EventInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q117="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q117:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEventInvolvedNamesResult" nillable="true" type="q118:ArrayOfEventInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseAttributeResult" nillable="true" type="q119:CaseAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseAttributesResult" nillable="true" type="q120:ArrayOfCaseAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseNoteResult" nillable="true" type="q121:CaseNote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseNotesResult" nillable="true" type="q122:ArrayOfCaseNote" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q123="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q123:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseEventResult" nillable="true" type="q124:CaseEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q125="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q125:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseEventsResult" nillable="true" type="q126:ArrayOfCaseEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetAgencyResult" nillable="true" type="q127:Agency" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAgencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAgenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindAgenciesResult" nillable="true" type="q128:ArrayOfAgency" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetLocationResult" nillable="true" type="q129:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindLocationsResult" nillable="true" type="q130:ArrayOfLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q131="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q131:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeResult" nillable="true" type="q132:Charge" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCharges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q133="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q133:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargesResult" nillable="true" type="q134:ArrayOfCharge" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q135="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q135:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeInvolvedNameResult" nillable="true" type="q136:ChargeInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q137="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q137:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeInvolvedNamesResult" nillable="true" type="q138:ArrayOfChargeInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeAttributeResult" nillable="true" type="q139:ChargeAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeAttributesResult" nillable="true" type="q140:ArrayOfChargeAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJudgment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q141="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q141:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJudgmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetJudgmentResult" nillable="true" type="q142:Judgment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJudgments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q143="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q143:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindJudgmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindJudgmentsResult" nillable="true" type="q144:ArrayOfJudgment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSentence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q145="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q145:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSentenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetSentenceResult" nillable="true" type="q146:Sentence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSentences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q147="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q147:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSentencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindSentencesResult" nillable="true" type="q148:ArrayOfSentence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q149="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q149:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseTaskResult" nillable="true" type="q150:CaseTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q151="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q151:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseTasksResult" nillable="true" type="q152:ArrayOfCaseTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q153="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q153:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameTaskResult" nillable="true" type="q154:NameTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameTaskWithNameID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element minOccurs="0" name="nameID" type="xs:int" />
+        <xs:element xmlns:q155="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q155:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameTaskWithNameIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameTaskWithNameIDResult" nillable="true" type="q156:NameTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q157="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q157:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameTasksResult" nillable="true" type="q158:ArrayOfNameTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaskInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q159="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q159:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaskInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetTaskInvolvedNameResult" nillable="true" type="q160:TaskInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTaskInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q161="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q161:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTaskInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindTaskInvolvedNamesResult" nillable="true" type="q162:ArrayOfTaskInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCorrespondenceInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCorrespondenceInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCorrespondenceInvolvedNameResult" nillable="true" type="q163:CorrespondenceInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCorrespondenceInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCorrespondenceInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCorrespondenceInvolvedNamesResult" nillable="true" type="q164:ArrayOfCorrespondenceInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameCorrespondence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q165="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q165:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameCorrespondenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameCorrespondenceResult" nillable="true" type="q166:NameCorrespondence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameCorrespondenceWithNameID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element minOccurs="0" name="nameID" type="xs:int" />
+        <xs:element xmlns:q167="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q167:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameCorrespondenceWithNameIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameCorrespondenceWithNameIDResult" nillable="true" type="q168:NameCorrespondence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameCorrespondences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q169="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q169:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameCorrespondencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameCorrespondencesResult" nillable="true" type="q170:ArrayOfNameCorrespondence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseCorrespondence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q171="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q171:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseCorrespondenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseCorrespondenceResult" nillable="true" type="q172:CaseCorrespondence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseCorrespondences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q173="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q173:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseCorrespondencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseCorrespondencesResult" nillable="true" type="q174:ArrayOfCaseCorrespondence" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q175="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q175:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetConditionResult" nillable="true" type="q176:Condition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q177="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q177:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindConditionsResult" nillable="true" type="q178:ArrayOfCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeAgency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q179="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q179:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeAgencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeAgencyResult" nillable="true" type="q180:ChargeAgency" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAgencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q181="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q181:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeAgenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeAgenciesResult" nillable="true" type="q182:ArrayOfChargeAgency" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeEnhancement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q183="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q183:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeEnhancementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeEnhancementResult" nillable="true" type="q184:ChargeEnhancement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeEnhancements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q185="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q185:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeEnhancementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeEnhancementsResult" nillable="true" type="q186:ArrayOfChargeEnhancement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTimeTrackingEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q187="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q187:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTimeTrackingEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetPendingTimeTrackingEntryResult" nillable="true" type="q188:PendingTimeTrackingEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPendingTimeTrackingEntries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q189="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q189:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPendingTimeTrackingEntriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPendingTimeTrackingEntriesResult" nillable="true" type="q190:ArrayOfPendingTimeTrackingEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntoxicant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntoxicantResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetIntoxicantResult" nillable="true" type="q191:Intoxicant" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindIntoxicants">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindIntoxicantsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindIntoxicantsResult" nillable="true" type="q192:ArrayOfIntoxicant" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q193="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q193:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetExhibitResult" nillable="true" type="q194:Exhibit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q195="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q195:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindExhibitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindExhibitsResult" nillable="true" type="q196:ArrayOfExhibit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNonCollectableFinancial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q197="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q197:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameNonCollectableFinancialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameNonCollectableFinancialResult" nillable="true" type="q198:NameNonCollectableFinancial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNonCollectableFinancials">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q199="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q199:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameNonCollectableFinancialsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameNonCollectableFinancialsResult" nillable="true" type="q200:ArrayOfNameNonCollectableFinancial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhysicalLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q201="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q201:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhysicalLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetPhysicalLocationResult" nillable="true" type="q202:PhysicalLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhysicalLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q203="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q203:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPhysicalLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q204="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPhysicalLocationsResult" nillable="true" type="q204:ArrayOfPhysicalLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseNonCollectableFinancial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q205="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q205:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseNonCollectableFinancialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseNonCollectableFinancialResult" nillable="true" type="q206:CaseNonCollectableFinancial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNonCollectableFinancials">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q207="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q207:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseNonCollectableFinancialsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseNonCollectableFinancialsResult" nillable="true" type="q208:ArrayOfCaseNonCollectableFinancial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCollectableFinancialInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q209="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q209:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCollectableFinancialInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q210="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNonCollectableFinancialInvolvedNameResult" nillable="true" type="q210:NonCollectableFinancialInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCollectableFinancialInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q211="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q211:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCollectableFinancialInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNonCollectableFinancialInvolvedNamesResult" nillable="true" type="q212:ArrayOfNonCollectableFinancialInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q213="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q213:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q214="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNameDocumentResult" nillable="true" type="q214:NameDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q215="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q215:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNameDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q216="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNameDocumentsResult" nillable="true" type="q216:ArrayOfNameDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q217="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q217:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q218="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseDocumentResult" nillable="true" type="q218:CaseDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q219="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q219:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q220="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseDocumentsResult" nillable="true" type="q220:ArrayOfCaseDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentInvolvedName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q221="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q221:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentInvolvedNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q222="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetDocumentInvolvedNameResult" nillable="true" type="q222:DocumentInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocumentInvolvedNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q223="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q223:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocumentInvolvedNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q224="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindDocumentInvolvedNamesResult" nillable="true" type="q224:ArrayOfDocumentInvolvedName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q225="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q225:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationPersonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q226="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetApplicationPersonResult" nillable="true" type="q226:ApplicationPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindApplicationPersons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q227="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q227:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindApplicationPersonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q228="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindApplicationPersonsResult" nillable="true" type="q228:ArrayOfApplicationPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q229="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q229:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChargeHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q230="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetChargeHistoryResult" nillable="true" type="q230:ChargeHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q231="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q231:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChargeHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q232="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindChargeHistoriesResult" nillable="true" type="q232:ArrayOfChargeHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q233="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q233:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q234="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetStatuteResult" nillable="true" type="q234:Statute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q235="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q235:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q236="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatutesResult" nillable="true" type="q236:ArrayOfStatute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuteAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q237="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q237:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuteAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q238="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetStatuteAttributeResult" nillable="true" type="q238:StatuteAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q239="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q239:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q240="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteAttributesResult" nillable="true" type="q240:ArrayOfStatuteAttribute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuteText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q241="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q241:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuteTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q242="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetStatuteTextResult" nillable="true" type="q242:StatuteText" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteTexts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q243="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q243:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStatuteTextsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q244="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindStatuteTextsResult" nillable="true" type="q244:ArrayOfStatuteText" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObligation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q245="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q245:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObligationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q246="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetObligationResult" nillable="true" type="q246:Obligation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindObligations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q247="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q247:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindObligationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q248="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindObligationsResult" nillable="true" type="q248:ArrayOfObligation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q249="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q249:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q250="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetPaymentResult" nillable="true" type="q250:Payment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q251="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q251:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q252="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPaymentsResult" nillable="true" type="q252:ArrayOfPayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q253="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q253:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q254="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetTransferResult" nillable="true" type="q254:Transfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTransfers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q255="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q255:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTransfersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q256="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindTransfersResult" nillable="true" type="q256:ArrayOfTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrimaryNameRelationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q257="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q257:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrimaryNameRelationshipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q258="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetPrimaryNameRelationshipResult" nillable="true" type="q258:PrimaryNameRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPrimaryNameRelationships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q259="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q259:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPrimaryNameRelationshipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q260="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindPrimaryNameRelationshipsResult" nillable="true" type="q260:ArrayOfPrimaryNameRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecondaryNameRelationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q261="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q261:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecondaryNameRelationshipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q262="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetSecondaryNameRelationshipResult" nillable="true" type="q262:SecondaryNameRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSecondaryNameRelationships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q263="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q263:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSecondaryNameRelationshipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q264="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindSecondaryNameRelationshipsResult" nillable="true" type="q264:ArrayOfSecondaryNameRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseRelationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q265="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q265:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCaseRelationshipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q266="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCaseRelationshipResult" nillable="true" type="q266:CaseRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseRelationships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q267="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q267:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseRelationshipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q268="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseRelationshipsResult" nillable="true" type="q268:ArrayOfCaseRelationship" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCasePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q269="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q269:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCasePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q270="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNonCasePaymentResult" nillable="true" type="q270:NonCasePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q271="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q271:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q272="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNonCasePaymentsResult" nillable="true" type="q272:ArrayOfNonCasePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCasePaymentItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q273="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q273:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonCasePaymentItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q274="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetNonCasePaymentItemResult" nillable="true" type="q274:NonCasePaymentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePaymentItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q275="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q275:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCasePaymentItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q276="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNonCasePaymentItemsResult" nillable="true" type="q276:ArrayOfNonCasePaymentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCalendarDocket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q277="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q277:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCalendarDocketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q278="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetCalendarDocketResult" nillable="true" type="q278:CalendarDocket" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCalendarDockets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q279="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q279:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCalendarDocketsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q280="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCalendarDocketsResult" nillable="true" type="q280:ArrayOfCalendarDocket" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocketInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="justWareID" type="xs:int" />
+        <xs:element xmlns:q281="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q281:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocketInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q282="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="GetDocketInstanceResult" nillable="true" type="q282:DocketInstance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocketInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q283="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q283:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocketInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q284="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindDocketInstancesResult" nillable="true" type="q284:ArrayOfDocketInstance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Submit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q285="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="data" nillable="true" type="q285:DataContractBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q286="http://schemas.datacontract.org/2004/07/Ndt.Api" minOccurs="0" name="SubmitResult" nillable="true" type="q286:ArrayOfKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q287="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="document" nillable="true" type="q287:DataContractBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestFileDownloadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q288="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="document" nillable="true" type="q288:DataContractBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestFileUploadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizeFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q289="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="document" nillable="true" type="q289:DataContractBase" />
+        <xs:element minOccurs="0" name="uploadUri" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizeFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q290="http://schemas.datacontract.org/2004/07/Ndt.Api" minOccurs="0" name="FinalizeFileUploadResult" nillable="true" type="q290:ArrayOfKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallerNameID">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallerNameIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCallerNameIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q291="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q291:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q292="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseTypesResult" nillable="true" type="q292:ArrayOfCaseType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q293="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q293:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindEventTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q294="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindEventTypesResult" nillable="true" type="q294:ArrayOfEventType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseStatusTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q295="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q295:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCaseStatusTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q296="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCaseStatusTypesResult" nillable="true" type="q296:ArrayOfCaseStatusType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCorrespondenceTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q297="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q297:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCorrespondenceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q298="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindCorrespondenceTypesResult" nillable="true" type="q298:ArrayOfCorrespondenceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSentenceTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q299="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q299:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSentenceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q300="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindSentenceTypesResult" nillable="true" type="q300:ArrayOfSentenceType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindConditionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q301="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q301:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindConditionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q302="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindConditionTypesResult" nillable="true" type="q302:ArrayOfConditionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTaskTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q303="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q303:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTaskTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q304="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindTaskTypesResult" nillable="true" type="q304:ArrayOfTaskType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCollectableFinancialTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q305="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q305:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNonCollectableFinancialTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q306="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindNonCollectableFinancialTypesResult" nillable="true" type="q306:ArrayOfNonCollectableFinancialType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocumentTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="query" nillable="true" type="xs:string" />
+        <xs:element xmlns:q307="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="includedCollections" nillable="true" type="q307:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocumentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q308="http://schemas.datacontract.org/2004/07/Ndt.Api.Entities" minOccurs="0" name="FindDocumentTypesResult" nillable="true" type="q308:ArrayOfDocumentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

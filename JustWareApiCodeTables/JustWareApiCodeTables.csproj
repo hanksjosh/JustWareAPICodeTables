@@ -69,20 +69,20 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\JustWareApi\JustWareApi.wsdl" />
-    <None Include="Service References\JustWareApi\JustWareApi.xsd">
+    <None Include="Service References\JustWareApi\JustWareApi1.wsdl" />
+    <None Include="Service References\JustWareApi\JustWareApi5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\JustWareApi\JustWareApi1.xsd">
+    <None Include="Service References\JustWareApi\JustWareApi51.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\JustWareApi\JustWareApi2.xsd">
+    <None Include="Service References\JustWareApi\JustWareApi52.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\JustWareApi\JustWareApi3.xsd">
+    <None Include="Service References\JustWareApi\JustWareApi53.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\JustWareApi\JustWareApi4.xsd">
+    <None Include="Service References\JustWareApi\JustWareApi54.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Address.datasource">
@@ -100,10 +100,19 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ApplicationPerson.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CalendarDocket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Case.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseAttribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseAttributeCodeListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseAttributeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseCorrespondence.datasource">
@@ -122,6 +131,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseNote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseNoteType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.CaseRelationship.datasource">
@@ -148,13 +160,28 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeAttribute.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeAttributeCodeListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeAttributeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeEnhancement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeEnhancementType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeHistory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeHistoryType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeInvolvedName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ChargeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Condition.datasource">
@@ -175,6 +202,12 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.DispositionType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.DocketInstance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.DocketInstanceType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.DocumentInvolvedName.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -190,6 +223,9 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.EventInvolvedName.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.EventLocationType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.EventStatusType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -199,13 +235,28 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Exhibit.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ExhibitStatusType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.ExhibitType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Intoxicant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.IntoxicantType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.InvolveType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Judgment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.JurisdictionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.JusticeBrokerMessageQueue.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Key.datasource">
@@ -218,6 +269,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameAttribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameAttributeCodeListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameAttributeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameCorrespondence.datasource">
@@ -241,6 +298,9 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameTask.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NameType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NonCasePayment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -256,6 +316,9 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NonCollectableFinancialType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.NumberType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Obligation.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -263,6 +326,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Payment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PaymentStatusType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PaymentType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PendingTimeTrackingEntry.datasource">
@@ -275,6 +344,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PhysicalLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PhysicalLocationType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.PleaType.datasource">
@@ -301,7 +373,22 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteAttribute.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteAttributeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteCategoryType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteClassType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteSeverityType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteText.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.StatuteTextType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.TaskInvolvedName.datasource">
@@ -310,15 +397,18 @@
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.TaskType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.TimeTrackingStatusType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.TimeTrackingType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JustWareApi\JustWareApiCodeTables.JustWareApi.Transfer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\JustWareApi\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\JustWareApi\JustWareApi.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\JustWareApi\configuration91.svcinfo" />
@@ -331,6 +421,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JustWareApi\JustWareApi1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
